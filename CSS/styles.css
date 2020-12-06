@@ -1,0 +1,31 @@
+/* googlefonts의 폰트 파일을 가져옴. 폰트 파일을 많이 추가할 수록 웹사이트가 무거워지니 선택적으로 쓰자.*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;800&display=swap");
+/* 파일 순서 중요하다. 먼저 reset과 variables를 넣은 다음, 다른 CSS를 적용시켜야 함. */
+@import "reset.css";
+@import "variables.css";
+/*components folder*/
+@import "components/status-bar.css"; /*import!*/
+@import "components/nav-bar.css";
+@import "components/screen-header.css";
+@import "components/user-component.css";
+@import "components/badge.css";
+@import "components/icon-row.css";
+@import "components/alt-screen-header.css";
+@import "components/no-mobile.css";
+
+/*screens folder*/
+@import "screens/login.css";
+@import "screens/friends.css";
+@import "screens/search.css";
+@import "screens/more.css";
+@import "screens/settings.css";
+@import "screens/chat.css";
+body {
+    color: #2e363e;
+    font-family: "Montserrat", sans-serif;
+    height: 100vh;
+}
+.main-screen {
+    padding: 0px var(--horizontal-space);
+    margin: 100px 0 0;
+}

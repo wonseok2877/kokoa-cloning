@@ -1,0 +1,81 @@
+.nav {
+    /*position:fixed로 두면 해당 element가 원래의 width를 잃고 찌부러진다. 왜?
+    니꼬 답변: When we make an element fixed it basically breaks away from the body to another layer, so we need to give it proportions again.*/
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #eee;
+    padding: 10px 0;
+    border-top: solid 1px rgba(0, 0, 0, 0.7);
+}
+.nav__ul {
+    display: flex;
+    justify-content: space-around;
+}
+.nav__link {
+    position: relative; /*notification아 position absolute를 가지기 위한 */
+    color: inherit;
+}
+.nav__list:first-child {
+    /*커스텀. :hover과 transition이용. */
+    color: white;
+}
+.nav__link[href="search.html"] svg {
+    height: 30px;
+    width: 30px;
+}
+/* 애니메이션 */
+@keyframes notificationAnimation {
+    0% {
+        transform: none;
+    }
+    50% {
+        transform: translateY(-5px) rotateY(180deg);
+    }
+    100% {
+        transform: none;
+    }
+}
+.nav__notification {
+    position: absolute; /*그냥 flex의 relative의 경우 box들끼리 부딪힐 수밖에 없다. 같은 layer에 있기 때문.*/
+    left: 22px;
+    bottom: 15px;
+    animation: notificationAnimation 2s ease-in-out infinite;
+}
+.nav__list:first-child .nav__notification {
+    width: 20px;
+    height: 20px;
+    font-size: 13px;
+    font-style: italic;
+}
+.nav__list:last-child .nav__notification {
+    position: absolute;
+    left: 32px;
+    bottom: 25px;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+}
+@keyframes appearBtnAnimation {
+    from {
+    }
+    to {
+        transform: none;
+        opacity: 1;
+    }
+}
+.nav__list {
+    animation: appearBtnAnimation 0.5s ease-in-out forwards;
+    transform: translateY(60px);
+    /* delay때문에, keyframes가 적용되기 전까지 element들은 멀뚱멀뚱 있다. 그래서 아예 translateY로 감춰버림 */
+    opacity: 0;
+}
+.nav__list:nth-child(2) {
+    animation-delay: 0.3s;
+}
+.nav__list:nth-child(3) {
+    animation-delay: 0.6s;
+}
+.nav__list:last-child {
+    animation-delay: 0.9s;
+}

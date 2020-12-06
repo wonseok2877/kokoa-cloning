@@ -1,0 +1,16 @@
+.settings__setting {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+}
+.settings__setting i {
+    font-size: 22px;
+    margin-right: 20px;
+    color: slategrey;
+}
+.list-additional {
+    margin-left: auto;
+    opacity: 0.5;
+}

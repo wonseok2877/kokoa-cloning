@@ -1,0 +1,37 @@
+/* 같은 component CSS를 공유한다는 것은, 하나의 CSS를 바꾸면 여러개의 screen(html)을 바꾼다는 것이므로 편한 동시에 조심해야 한다.
+그래서 페이지마다 CSS를 붙여줘서 다른 class 이름을 붙여준다. 그럼 끝! 공통점은 한 CSS로 공유하고 차이점은 지역적인 CSS를 통해 세부적으로 조정하는 메커니즘. */
+/* .more-screen .icon-row{
+    margin-top: 25px;
+} */
+
+.more-suggestions {
+    margin-top: 50px;
+    border-top: var(--main-border);
+    padding-top: 30px;
+}
+.more-suggestions__title {
+    margin-bottom: 20px;
+}
+.more-suggestions__icons {
+    display: flex;
+}
+.more-suggestions__icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 30px;
+}
+.more-suggestions__icon-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    background-color: var(--yellow);
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.more-suggestions__icon-image i {
+    font-size: 26px;
+    color: white;
+}

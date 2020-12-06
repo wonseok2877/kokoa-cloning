@@ -1,0 +1,20 @@
+.alt-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+}
+.alt-header__title {
+    font-size: 24px;
+    font-weight: 600;
+}
+.alt-header__column:first-child {
+    width: 20%;
+}
+.alt-header__column:last-child {
+    display: flex;
+    justify-content: space-around;
+    width: 20%;
+}
+/* 난 screen-fixed class에다 fixed로 묶어서 상관없지만,
+니꼬는 여기서 z-index를 쓰면서 header과 statusbar의 layer을 설정했음. */

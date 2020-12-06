@@ -1,0 +1,63 @@
+/*header ~ footer*/
+.welcome-header {
+    margin: 80px 0 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.welcome-header__title {
+    margin-bottom: 20px;
+    font-size: 27px;
+}
+.welcome-header__text {
+    line-height: 20px;
+    width: 58%;
+    opacity: 70%;
+}
+#login-form {
+    display: flex; /*세로축 중앙정렬*/
+    flex-direction: column;
+    align-items: center;
+}
+#login-form input {
+    border: none; /*전체 input 스타일*/
+    width: 90%;
+    padding: 15px 0;
+    font-size: 18px;
+}
+#login-form input:nth-child(2n) {
+    margin: 15px 0 55px; /*인풋 사이 마진*/
+}
+#login-form input:nth-child(4n) {
+    margin-bottom: 55px;
+}
+
+#login-form input:not([type="submit"]) {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3); /*연한 border. focus의 transition 변경.*/
+    border-radius: 0px;
+    transition: border-color 0.4s ease-in-out, opacity 0.3s ease-in-out;
+}
+#login-form input[type="submit"] {
+    background-color: var(--yellow); /*submit 버튼 색깔,커서.*/
+    color: var(--brown);
+    cursor: pointer;
+    font-weight: 600;
+    padding: 20px 0;
+}
+#login-form input::placeholder {
+    opacity: 0.8;
+}
+#login-form input:focus {
+    border-color: var(--yellow);
+    opacity: 0.6;
+}
+/* reset.css에다가 input:focus를 none으로 해놓음.
+나중에도 쓸려고 하는듯. */
+
+#login-form a[href] {
+    text-align: center; /*맨 밑 text 스타일*/
+    text-decoration: none;
+    color: inherit;
+    font-size: 13px;
+}

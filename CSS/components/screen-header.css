@@ -1,0 +1,31 @@
+.screen-fixed {
+    /*status-bar과 screen-header을 하나로 묶어서 fixed.*/
+    position: fixed;
+    width: 100%;
+    top: 0; /*상단에 놓으려면 필수. 다른 element가 margin을 주면, 얘는 위치가 안정해져있어서 그대로 밀려난다.*/
+    z-index: 2;
+}
+.screen-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--horizontal-space);
+    font-size: 30px;
+    font-weight: 600;
+    z-index: 1; /*왠지는 모르겠는데 chat 화면에서 시간글자가 레이어위로 나온다.*/
+}
+.screen-header__icons i {
+    margin-left: var(--horizontal-space);
+}
+
+@keyframes rotateCog {
+    from {
+        transform: none;
+    }
+    to {
+        transform: rotateZ(360deg) rotateY(360deg);
+    }
+}
+.screen-header__icons .fa-cog:hover {
+    animation: rotateCog 3s ease-in-out infinite;
+}

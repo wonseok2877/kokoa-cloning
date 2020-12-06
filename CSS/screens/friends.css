@@ -1,0 +1,48 @@
+#friends-display-link {
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin: 100px 0 5px;
+    padding: 16px 0;
+    background-color: #fafafa;
+    font-weight: 600;
+}
+#friends-display-link i {
+    color: rgba(0, 0, 0, 0.3);
+    margin: 0 8px; /*inline도 양옆에는 margin을 가질 수 있으므로.*/
+}
+.friends-screen {
+    padding: 0px var(--horizontal-space);
+}
+.friends-screen__channel {
+    margin-top: 25px;
+}
+.friends-screen__channel-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0 20px;
+    color: var(--opacity);
+    border-top: var(--main-border);
+}
+@keyframes hideSplashScreen {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+#splash-screen {
+    position: absolute;
+    background-color: var(--yellow);
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 128px;
+    animation: hideSplashScreen 0.5s ease-out forwards; /*forwards! it remembers the end of keyframe.*/
+    animation-delay: 1.5s;
+}

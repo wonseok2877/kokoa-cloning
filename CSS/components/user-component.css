@@ -1,0 +1,49 @@
+.user-component,
+.user-component__column:first-child {
+    /*부모와 자식 중복으로 적용. component의 flex는 component__column을, component__column의 flex는 그 안의 img와 text를 center로 정렬하고 있다.*/
+    display: flex;
+    align-items: center;
+}
+.user-component {
+    justify-content: space-between;
+    padding-bottom: 20px; /*조정 필요*/
+}
+.user-component__avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 20px;
+    margin-right: 18px;
+}
+.user-component__title {
+    font-size: 17px;
+    font-weight: 600;
+}
+.user-component__title--not-bold {
+    font-weight: 400;
+}
+.user-component__subtitle {
+    margin-top: 7px;
+    font-size: 15px;
+    color: var(--opacity);
+}
+.user-component__avatar--xl {
+    width: 70px;
+    height: 70px;
+}
+.user-component__avatar--sm {
+    width: 57px;
+    height: 57px;
+    border-radius: 18px;
+}
+.user-component__column:last-child {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    color: var(--opacity);
+}
+/*이 column에다가 height를 주면 space-between을 넣음으로써 밑의 margin짓거리를 안해도 된다.
+그러나, 이 column은 공유된다. 다른 html(friends, search,more)의 스타일에도 영향을 준다는 것.
+ 그러니 특별한 경우가 아니라면 공통적으로 적용하기 쉽게끔 css를 짜야 한다!*/
+.user-component__time {
+    margin-bottom: 10px;
+}
