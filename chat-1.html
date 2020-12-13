@@ -1,0 +1,183 @@
+<!-- 대부분의 웹 서버가 디폴트로 index.html을 찾아보도록 설정되어있다. index는 지표를 뜻함. 그래서 index.html만듬. -->
+<!-- 명심해. 기억하고 암기하는게 아니라 이해하는거야. html기본 구조를 다 직접 작성할 필요는 없어. 단축키 '!'하나면 돼.-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="CSS/styles.css" rel="stylesheet" />
+    <title>Chat with squidward - sponge talk</title>
+  </head>
+  <body id="chat-screen">
+    <div class="screen-fixed">
+      <div class="status-bar">
+        <div class="status-bar__column">
+          <span>Flight mode</span>
+          <i class="fas fa-plane"></i>
+        </div>
+        <!--이 class는 fontawesome에서 만들어놓은 것.-->
+        <div class="status-bar__column">
+          <span>19:52</span>
+        </div>
+        <div class="status-bar__column">
+          <span>15%</span>
+          <!-- Battery Icon -->
+          <!-- Lightening Icon -->
+          <i class="fas fa-battery-quarter fa-lg"></i>
+          <i class="fas fa-bolt"></i>
+        </div>
+      </div>
+      <header class="alt-header">
+        <div class="alt-header__column">
+          <a href="chats.html"> <i class="fas fa-angle-left fa-2x"></i></a>
+        </div>
+        <div class="alt-header__column">
+          <h1 class="alt-header__title">squidward</h1>
+        </div>
+        <div class="alt-header__column">
+          <span><i class="fas fa-search fa-lg"></i></span>
+          <span><i class="fas fa-bars fa-lg"></i></span>
+        </div>
+      </header>
+    </div>
+
+    <main class="main-screen main-chat">
+      <div class="chat__timestamp">Sunday, December 13, 2020</div>
+      <div class="message-row">
+        <img src="squidward.jpeg" />
+        <div class="message-row__content">
+          <span class="message__author">squidward</span>
+          <div class="message__info">
+            <span class="message__bubble">Hey spongebob?</span>
+            <span class="message__time">19:36</span>
+          </div>
+        </div>
+      </div>
+      <div class="message-row message-row--own">
+        <div class="message-row__content">
+          <div class="message__info">
+            <span class="message__bubble">I'm here squidward,</span>
+            <span class="message__time">19:38</span>
+          </div>
+        </div>
+      </div>
+      <div class="message-row message-row--own">
+        <div class="message-row__content">
+          <div class="message__info">
+            <span class="message__bubble">Catching jelly fish!🐟🦑</span>
+            <span class="message__time"></span>
+          </div>
+        </div>
+      </div>
+      <div class="message-row message-row--own">
+        <div class="message-row__content">
+          <div class="message__info">
+            <span class="message__bubble">So funnn hahaahaaaha</span>
+            <span class="message__time">19:39</span>
+          </div>
+        </div>
+      </div>
+      <div class="message-row">
+        <img src="squidward.jpeg" />
+        <div class="message-row__content">
+          <span class="message__author">squidward</span>
+          <div class="message__info">
+            <span class="message__bubble">No. that's enough!!😡😡</span>
+            <span class="message__time">19:43</span>
+          </div>
+        </div>
+      </div>
+      <div class="message-row">
+        <img src="squidward.jpeg" />
+        <div class="message-row__content">
+          <!-- <span class="message__author">squidward</span> -->
+          <div class="message__info">
+            <span class="message__bubble"
+              >You should come to krusty krab to work now,<br />or I will call
+              mr.krabs!</span
+            >
+            <span class="message__time"></span>
+          </div>
+        </div>
+      </div>
+      <div class="message-row message-row--own">
+        <div class="message-row__content">
+          <div class="message__info">
+            <span class="message__bubble">you are sooo funny</span>
+            <span class="message__time">19:48</span>
+          </div>
+        </div>
+      </div>
+      <div class="message-row message-row--own">
+        <div class="message-row__content">
+          <div class="message__info">
+            <span class="message__bubble">hahahahhahaahaaaha</span>
+            <span class="message__time"></span>
+          </div>
+        </div>
+      </div>
+      <div class="message-row message-row--own">
+        <div class="message-row__content">
+          <div class="message__info">
+            <span class="message__bubble">haaaaaaaaahahahhahaahaaaha</span>
+            <span class="message__time"></span>
+          </div>
+        </div>
+      </div>
+      <div class="message-row">
+        <img src="squidward.jpeg" />
+        <div class="message-row__content">
+          <span class="message__author">squidward</span>
+          <div class="message__info">
+            <span class="message__bubble"
+              >Oh, I will killl you spongebob!!!</span
+            >
+            <span class="message__time">19:51</span>
+          </div>
+        </div>
+      </div>
+      <div class="message-row">
+        <img src="squidward.jpeg" />
+        <div class="message-row__content">
+          <!-- <span class="message__author">squidward</span> -->
+          <div class="message__info">
+            <span class="message__bubble"
+              >come to krusty krab as soon as possible!!!</span
+            >
+            <span class="message__time"></span>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <form class="reply">
+      <div class="reply__column">
+        <i class="far fa-plus-square fa-lg"></i>
+      </div>
+      <div class="reply__column">
+        <input type="text" name="" placeholder="Write a message.." />
+        <i class="far fa-smile-wink fa-lg"></i>
+      </div>
+      <div class="reply__column">
+        <button>
+          <i class="fas fa-arrow-circle-up fa-2x"></i>
+        </button>
+      </div>
+    </form>
+
+    <div id="no-mobile">
+      <h2>Your screen is too big 🤔</h2>
+      <div class="no-mobile__images">
+        <img src="leftpulling.jpg" />
+        <img src="rightpulling.jpg" />
+      </div>
+    </div>
+
+    <img class="main-background" src="seabackground.jpg" />
+    <script
+      src="https://kit.fontawesome.com/358173d6e8.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- script는 항상 body태그 속 마지막에 있어야 함. -->
+  </body>
+</html>

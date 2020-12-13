@@ -1,157 +1,167 @@
 #chat-screen {
-    height: 1000vh;
-    background-color: #abc1d1;
+  background-color: #abc1d1;
+  padding-bottom: 100px;
 }
 #chat-screen .screen-fixed {
-    background-color: #abc1d1;
+  background-color: lightseagreen;
 }
 @keyframes fadeIn {
-    from {
-        transform: translateY(20px);
-        opacity: 0;
-    }
-    to {
-        transform: none;
-        opacity: 1;
-    }
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
 }
 .main-chat {
-    animation: fadeIn 0.5s linear;
+  animation: fadeIn 0.5s linear;
+  position: relative;
+  top: -30px;
 }
 .chat__timestamp {
-    margin: 40px auto 25px;
-    width: 50%;
-    text-align: center;
-    padding: 6px;
-    border-radius: 18px;
-    background-color: rgba(0, 0, 0, 0.2);
-    color: white;
-    font-size: 14px;
+  margin: 1px auto 25px;
+  width: 50%;
+  text-align: center;
+  padding: 6px;
+  border-radius: 18px;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: white;
+  font-size: 14px;
 }
 .message-row {
-    display: flex;
-    margin-bottom: 25px;
+  display: flex;
+  margin-bottom: 25px;
 }
 .message-row img {
-    width: 50px;
-    height: 50px;
-    border-radius: 15px;
-    margin-right: 12px;
+  width: 50px;
+  height: 50px;
+  border-radius: 15px;
+  margin-right: 12px;
 }
 .message__author {
-    display: block;
-    margin: 2px 0 8px;
+  display: block;
+  margin: 2px 0 8px;
 }
 .message__info {
-    display: flex;
-    align-items: flex-end;
+  display: flex;
+  align-items: flex-end;
 }
 .message__bubble {
-    background-color: white;
-    padding: 8px 12px;
-    margin-right: 6px;
-    border-radius: 10px;
-    border-top-left-radius: 0px;
+  background-color: white;
+  padding: 8px 12px;
+  margin-right: 6px;
+  border-radius: 10px;
+  border-top-left-radius: 0px;
+}
+.message__bubble-image {
+  background-color: inherit;
+  padding: 0;
+}
+.message__bubble-image img {
+  height: 260px;
+  width: 260px;
 }
 .message__author,
 .message__time {
-    opacity: 0.8;
-    font-size: 14px;
+  opacity: 0.8;
+  font-size: 14px;
 }
 .message-row--own {
-    justify-content: flex-end;
-    margin-left: auto;
-    /*고민..부모요소에다가 flex-end를 박아서 깔끔하게 오른쪽에다 박을 방법이 있을거다. 조건문이 되나?*/
-    width: 75%;
+  justify-content: flex-end;
+  margin-left: auto;
+  /*고민..부모요소에다가 flex-end를 박아서 깔끔하게 오른쪽에다 박을 방법이 있을거다. 조건문이 되나?*/
+  width: 75%;
 }
 .message-row--own .message__bubble {
-    background-color: var(--yellow);
-    border-top-right-radius: 0px;
-    border-top-left-radius: 10px;
+  background-color: var(--yellow);
+  border-top-right-radius: 0px;
+  border-top-left-radius: 10px;
 }
 .message-row--own .message__info {
-    flex-direction: row-reverse;
-    /* order를 각자의 element에 써서 조정할 수도 있지만, 이게 훨 편하다.
+  flex-direction: row-reverse;
+  /* order를 각자의 element에 써서 조정할 수도 있지만, 이게 훨 편하다.
     row의 방향을 뒤집어버림. */
 }
 .reply {
-    position: fixed;
-    bottom: 0;
-    display: flex;
-    justify-content: space-around; /*정렬*/
-    align-items: center;
-    width: 100%;
-    padding: 10px 15px; /*세부조정 필요*/
-    background-color: white;
-    box-sizing: border-box;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around; /*정렬*/
+  align-items: center;
+  width: 100%;
+  padding: 10px 15px; /*세부조정 필요*/
+  background-color: white;
+  box-sizing: border-box;
 }
 .reply i {
-    opacity: 0.6;
+  opacity: 0.6;
 }
 .reply .reply__column:first-child {
-    width: 10%;
+  width: 10%;
 }
 .reply .reply__column:nth-child(2) {
-    position: relative;
-    width: 90%; /*부모 element의 width 먼저 설정해줘야 함.*/
+  position: relative;
+  width: 90%; /*부모 element의 width 먼저 설정해줘야 함.*/
 }
 .reply input {
-    height: 30px;
-    width: 90%;
-    padding: 5px 10px;
-    font-size: 16px;
-    border: var(--main-border);
-    border-radius: 20px;
-    transition: all 0.3s ease-in-out;
+  height: 30px;
+  width: 90%;
+  padding: 5px 10px;
+  font-size: 16px;
+  border: var(--main-border);
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
 }
 .reply__column:nth-child(2) i {
-    position: absolute;
-    right: 8%;
-    /*이건 어렵다. input element안에 넣을 수는 없으니까 pixel상에서 움직여야 하고. 결국 조금 더러워질수밖에 없는건가?*/
-    top: 14px;
+  position: absolute;
+  right: 8%;
+  /*이건 어렵다. input element안에 넣을 수는 없으니까 pixel상에서 움직여야 하고. 결국 조금 더러워질수밖에 없는건가?*/
+  top: 14px;
 }
 .reply__column:last-child button {
-    width: 30px;
-    height: 30px;
-    border: none;
-    border-radius: 50%;
-    position: relative;
-    background-color: white;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 50%;
+  position: relative;
+  background-color: white;
 }
 /* 개같은거. 아이콘이 왜 부모요소 중앙에서 오른쪽으로 가있는거? */
 .reply__column:last-child i {
-    background-color: var(--yellow);
-    color: var(--brown);
-    border-radius: 50%;
-    opacity: 1; /*opacity:0.6을 전체 아이콘에다 적용해놔서 이렇게 따로 설정.*/
+  background-color: var(--yellow);
+  color: var(--brown);
+  border-radius: 50%;
+  opacity: 1; /*opacity:0.6을 전체 아이콘에다 적용해놔서 이렇게 따로 설정.*/
 }
 .reply__column:last-child button:focus,
 .reply__column:last-child button:active {
-    outline: none;
+  outline: none;
 }
 .reply i:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 .reply input:focus {
-    border-color: var(--brown);
+  border-color: var(--brown);
 }
 /* hover, active등 디테일설정할거 참 많다. */
 .reply .reply__column:first-child,
 .reply .fa-smile-wink,
 .reply .reply__column:last-child {
-    transition: opacity 0.3s ease-in-out;
-    /*.reply input의 속도에 맞춰서. */
+  transition: opacity 0.3s ease-in-out;
+  /*.reply input의 속도에 맞춰서. */
 }
 .reply:focus-within .reply__column:first-child,
 .reply:focus-within .fa-smile-wink,
 .reply:focus-within .reply__column:last-child {
-    opacity: 0;
+  opacity: 0;
 }
 .reply:focus-within input {
-    width: 90vw;
-    transform: translateX(-5vw) translateY(-80px);
-    /*BAMMM!..모션이 깔끔하진 않다?아예 위치를 바꿔야 할듯 transition으로.*/
+  width: 90vw;
+  transform: translateX(-5vw) translateY(-80px);
+  /*BAMMM!..모션이 깔끔하진 않다?아예 위치를 바꿔야 할듯 transition으로.*/
 }
 .reply:focus-within {
-    transform: translateY(70px);
+  transform: translateY(70px);
 }

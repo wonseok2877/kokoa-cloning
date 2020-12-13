@@ -6,16 +6,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="CSS/styles.css" rel="stylesheet" />
-    <title>friends - kokoa talk</title>
+    <title>friends - sponge talk</title>
   </head>
   <body>
     <div class="screen-fixed">
       <div class="status-bar">
         <div class="status-bar__column">
           <!--BEM명명법 때문임. '__' : 안에 들어갈 내용의 종류. '--' : 속성 혹은 property.-->
-          <span>No Service</span>
+          <span>Flight mode</span>
           <!--To Do : Wifi Icon-->
-          <i class="fas fa-wifi"></i>
+          <i class="fas fa-plane"></i>
         </div>
         <!--이 class는 fontawesome에서 만들어놓은 것.-->
         <div class="status-bar__column">
@@ -23,8 +23,6 @@
         </div>
         <div class="status-bar__column">
           <span>15%</span>
-          <!-- Battery Icon -->
-          <!-- Lightening Icon -->
           <i class="fas fa-battery-quarter fa-lg"></i>
           <i class="fas fa-bolt"></i>
         </div>
@@ -32,31 +30,57 @@
       <header class="screen-header">
         <h1 class="screen-header__title">Friends</h1>
         <div class="screen-header__icons">
-          <span><i class="fas fa-search"></i></span>
-          <span><i class="fas fa-music"></i></span>
-          <span><i class="fas fa-cog"></i></span>
+          <span><i class="fas fa-search fa-sm"></i></span>
+          <span><i class="fas fa-user-plus fa-sm"></i></span>
+          <span><i class="fas fa-music fa-sm"></i></span>
+          <span><a href="settings.html"><i class="fas fa-cog fa-sm"></i></a
+            ></span>
         </div>
       </header>
     </div>
-
-    <a id="friends-display-link">
-      <i class="fas fa-info-circle"></i> Friends' Names Display
-      <i class="fas fa-chevron-right fa-xs"></i>
-    </a>
 
     <main class="friends-screen">
       <div class="user-component">
         <div class="user-component__column">
           <image
-            src="penguin.jfif"
+            src="spongebob.jfif"
             class="user-component__avatar user-component__avatar--xl"
           />
           <div class="user-component__text">
-            <h4 class="user-component__title">Wonseok Lee</h4>
-            <!-- <h6 class="user-component__subtitle">text text text</h6> -->
+            <h4 class="user-component__title">Sponge Bob</h4>
+            <h6 class="user-component__subtitle">hahahahahaaa~~</h6>
           </div>
         </div>
-        <div class="user-component__column"></div>
+        <div class="user-component__column">
+          <audio controls>
+            <source src="themesong.mp3" type="audio/mpeg" />
+          </audio>
+        </div>
+      </div>
+      <div class="friends-screen__channel">
+        <div class="friends-screen__channel-header">
+          <span>Birthday</span> <i class="fas fa-chevron-up fa-xs"></i>
+        </div>
+        <div class="user-component">
+          <div class="user-component__column">
+            <image
+              src="smile.jpg"
+              class="user-component__avatar user-component__avatar--sm"
+            />
+            <div class="user-component__text">
+              <h4 class="user-component__title user-component__title--not-bold">
+                Check out friends' birthday!
+              </h4>
+              <!-- <h6 class="user-component__subtitle">text text text</h6> -->
+            </div>
+          </div>
+          <div class="user-component__column">
+            <div>
+              <span> 7 <i class="fas fa-chevron-right fa-xs"></i></span>
+              <!-- __column이 flexbox가 되었고 축을 바꾸게되면서 div로 한 번 감싸줘야만 위의 span이 직접적으로 영향을 받지 않게 됨. -->
+            </div>
+          </div>
+        </div>
       </div>
       <div class="friends-screen__channel">
         <div class="friends-screen__channel-header">
@@ -65,12 +89,32 @@
         <div class="user-component">
           <div class="user-component__column">
             <image
-              src="kakaochannel.png"
+              src="krustykrab.jpg"
               class="user-component__avatar user-component__avatar--sm"
             />
             <div class="user-component__text">
               <h4 class="user-component__title user-component__title--not-bold">
-                Channel
+                krustykrab
+              </h4>
+              <!-- <h6 class="user-component__subtitle">text text text</h6> -->
+            </div>
+          </div>
+          <div class="user-component__column">
+            <div>
+              <span> 5 <i class="fas fa-chevron-right fa-xs"></i></span>
+              <!-- __column이 flexbox가 되었고 축을 바꾸게되면서 div로 한 번 감싸줘야만 위의 span이 직접적으로 영향을 받지 않게 됨. -->
+            </div>
+          </div>
+        </div>
+        <div class="user-component">
+          <div class="user-component__column">
+            <image
+              src="boating.jpg"
+              class="user-component__avatar user-component__avatar--sm"
+            />
+            <div class="user-component__text">
+              <h4 class="user-component__title user-component__title--not-bold">
+                Driver school
               </h4>
               <!-- <h6 class="user-component__subtitle">text text text</h6> -->
             </div>
@@ -83,25 +127,210 @@
           </div>
         </div>
       </div>
+      <div class="friends-screen__channel">
+        <div class="friends-screen__channel-header">
+          <span>New</span> <i class="fas fa-chevron-up fa-xs"></i>
+        </div>
+        <div class="user-component">
+          <div class="user-component__column">
+            <image
+              src="larry.png"
+              class="user-component__avatar user-component__avatar--sm"
+            />
+            <div class="user-component__text">
+              <h4 class="user-component__title user-component__title--not-bold">
+                larry lobster
+              </h4>
+              <!-- <h6 class="user-component__subtitle">text text text</h6> -->
+            </div>
+          </div>
+          <div class="user-component__column user-component__melon">
+            <div>
+                <span>exercise songs - vario..</span><i class="fas fa-play-circle"></i>
+            </div>
+          </div>
+        </div>
+        <div class="user-component">
+          <div class="user-component__column">
+            <image
+              src="oldfish.jpg"
+              class="user-component__avatar user-component__avatar--sm"
+            />
+            <div class="user-component__text">
+              <h4 class="user-component__title user-component__title--not-bold">
+                gentlefish
+              </h4>
+              <h6 class="user-component__subtitle">I'm 80 now, coding is still exciting!</h6>
+            </div>
+          </div>
+          <div class="user-component__column">
+            <div>
+              <!-- <span> 7 <i class="fas fa-chevron-right fa-xs"></i></span> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="friends-screen__channel">
+        <div class="friends-screen__channel-header">
+          <span>Friends</span> <i class="fas fa-chevron-up fa-xs"></i>
+        </div>
+        <div class="user-component">
+        <div class="user-component__column">
+          <image
+            src="gary.jpg"
+            class="user-component__avatar user-component__avatar--sm"
+          />
+          <div class="user-component__text">
+            <h4 class="user-component__title user-component__title--not-bold">
+              Ping Ping
+            </h4>
+            <h6 class="user-component__subtitle">miyaooong?</h6>
+          </div>
+        </div>
+        <div class="user-component__column">
+          <div>
+            <span></span>
+          </div>
+        </div>
+      </div>
+      <div class="user-component">
+        <div class="user-component__column">
+          <image
+            src="patrick.gif"
+            class="user-component__avatar user-component__avatar--sm"
+          />
+          <div class="user-component__text">
+            <h4 class="user-component__title user-component__title--not-bold">
+              patrick star
+            </h4>
+            <h6 class="user-component__subtitle">Let's play spongebob~</h6>
+          </div>
+        </div>
+        <div class="user-component__column user-component__melon">
+          <div>
+            <span>stfu - pink guy</span><i class="fas fa-play-circle"></i>
+          </div>
+        </div>
+      </div>
+      <div class="user-component">
+        <div class="user-component__column">
+          <image
+            src="squidward.jpeg"
+            class="user-component__avatar user-component__avatar--sm"
+          />
+          <div class="user-component__text">
+            <h4 class="user-component__title user-component__title--not-bold">
+              squidward
+            </h4>
+            <h6 class="user-component__subtitle">get away from me!!</h6>
+          </div>
+        </div>
+        <div class="user-component__column user-component__melon">
+          <div>
+            <span>creep - radiohead</span><i class="fas fa-play-circle"></i>
+          </div>
+        </div>
+      </div>
+      <div class="user-component">
+        <div class="user-component__column">
+          <image
+            src="sandy.jpg"
+            class="user-component__avatar user-component__avatar--sm"
+          />
+          <div class="user-component__text">
+            <h4 class="user-component__title user-component__title--not-bold">
+              sandy cheeks
+            </h4>
+            <h6 class="user-component__subtitle"></h6>
+          </div>
+        </div>
+        <div class="user-component__column">
+          <div>
+            <span></span>
+          </div>
+        </div>
+      </div>
+      <div class="user-component">
+        <div class="user-component__column">
+          <image
+            src="plankton.jpg"
+            class="user-component__avatar user-component__avatar--sm"
+          />
+          <div class="user-component__text">
+            <h4 class="user-component__title user-component__title--not-bold">
+              plankton
+            </h4>
+            <h6 class="user-component__subtitle">I'm a king of the sea!</h6>
+          </div>
+        </div>
+        <div class="user-component__column user-component__melon">
+          <div>
+            <span>highway to hell - gnr</span><i class="fas fa-play-circle"></i>
+          </div>
+        </div>
+      </div>
+      <div class="user-component">
+        <div class="user-component__column">
+          <image
+            src="mrkrabs.jpg"
+            class="user-component__avatar user-component__avatar--sm"
+          />
+          <div class="user-component__text">
+            <h4 class="user-component__title user-component__title--not-bold">
+              mr. krabs
+            </h4>
+            <h6 class="user-component__subtitle"></h6>
+          </div>
+        </div>
+        <div class="user-component__column">
+          <div>
+            <span></span>
+          </div>
+        </div>
+      </div>
+      <div class="user-component">
+        <div class="user-component__column">
+          <image
+            src="pearlkrabs.jpg"
+            class="user-component__avatar user-component__avatar--sm"
+          />
+          <div class="user-component__text">
+            <h4 class="user-component__title user-component__title--not-bold">
+              pearl krabs
+            </h4>
+            <h6 class="user-component__subtitle">I hate daddy! ㅠㅠ</h6>
+          </div>
+        </div>
+        <div class="user-component__column user-component__melon">
+          <div>
+            <span>daddy - psy</span><i class="fas fa-play-circle"></i>
+          </div>
+        </div>
+      </div>
+      <div class="see-below">
+        <i class="fas fa-arrow-down"></i><span> More...</span>
+      </div>
     </main>
 
     <nav class="nav">
+              <img class="nav__image" src="necktie.svg">
       <ul class="nav__ul">
         <li class="nav__list">
           <a class="nav__link" href="friends.html"
             ><span class="nav__notification badge">N</span
-            ><i class="fas fa-user fa-2x"></i
+            ><i class="fas fa-user fa-2x for-each-pages"></i
           ></a>
         </li>
         <li class="nav__list">
           <a class="nav__link" href="chats.html"
-            ><span class="nav__notification badge">1</span>
-            <i class="far fa-comment fa-2x"></i
+            ><span class="nav__notification badge">23</span>
+            <i class="fas fa-comment fa-2x"></i
           ></a>
         </li>
+        <!-- <img class="nav__image" src="necktie.svg"> -->
         <li class="nav__list">
           <a class="nav__link" href="search.html"
-            ><i class="fas fa-search fa-2x"></i
+            ><i class="fas fa-hashtag fa-2x"></i
           ></a>
         </li>
         <li class="nav__list">
@@ -113,12 +342,18 @@
     </nav>
 
     <div id="splash-screen">
-      <i class="fas fa-comment"></i>
+      <div><span>A FEW</span> <span>MOMENTS LATER</span></div>
     </div>
 
     <div id="no-mobile">
-      <span>→ Your screen is too big.. 🤔 ←</span>
+      <h2>Your screen is too big 🤔</h2>
+      <div class="no-mobile__images">
+        <img src="leftpulling.jpg" />
+        <img src="rightpulling.jpg" />
+      </div>
     </div>
+
+    <img class="main-background" src="pineapplehouse2.jpg" />
 
     <script
       src="https://kit.fontawesome.com/358173d6e8.js"

@@ -1,27 +1,69 @@
 .status-bar {
-    display: flex; /*보통은 간격을 주기위해 space-between을 쓰지만, CSS 핵이란 걸 응용해서 center을 씀.*/
-    padding: 5px 3px;
-    background-color: rgb(0, 0, 0, 0.2);
-    transition: all 0.2s ease-in-out;
+  display: flex; /*보통은 간격을 주기위해 space-between을 쓰지만, CSS 핵이란 걸 응용해서 center을 씀.*/
+  padding: 5px 3px;
+  background-color: rgb(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
 }
 .status-bar:hover {
-    background-color: rgb(0, 0, 0, 0.5);
+  background-color: rgb(0, 0, 0, 0.5);
 }
 .status-bar__column {
-    width: 33%;
+  width: 33%;
 }
 .status-bar__column:first-child span {
-    margin-right: 5px;
+  margin-right: 5px;
 }
 .status-bar__column:nth-child(2) {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 .status-bar__column:nth-child(3) {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 .status-bar__column .fa-battery-quarter {
-    margin: 0 5px;
+  margin: 0 5px;
+}
+/* amimista slide-out-right */
+@keyframes slide-out-right {
+  0% {
+    -webkit-transform: translateX(-100px);
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  10% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+  /* CSS trick - make the animation time longer, and make the parts as same.  */
+  50% {
+    -webkit-transform: translateX(100px);
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(100px);
+    transform: translateX(100px);
+    opacity: 0;
+  }
+}
+.status-bar__column .fa-plane {
+  animation: slide-out-right 10s cubic-bezier(0.55, 0.085, 0.68, 0.53) infinite
+    both;
+  animation-delay: 2s;
+}
+/* usual keyframe^^ */
+@keyframes lightningbolt {
+  0% {
+  }
+  50% {
+    color: yellow;
+  }
+  100% {
+  }
+}
+.fa-bolt {
+  animation: lightningbolt 3s ease-in-out infinite;
 }

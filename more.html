@@ -2,147 +2,144 @@
 <!-- 명심해. 기억하고 암기하는게 아니라 이해하는거야. html기본 구조를 다 직접 작성할 필요는 없어. 단축키 '!'하나면 돼.-->
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link href="CSS/styles.css" rel="stylesheet" />
-        <title>More - kokoa talk</title>
-    </head>
-    <body>
-        <div class="screen-fixed">
-            <div class="status-bar">
-                <div class="status-bar__column">
-                    <!--BEM명명법 때문임. '__' : 안에 들어갈 내용의 종류. '--' : 속성 혹은 property.-->
-                    <span>No Service</span>
-                    <!--To Do : Wifi Icon-->
-                    <i class="fas fa-wifi"></i>
-                </div>
-                <!--이 class는 fontawesome에서 만들어놓은 것.-->
-                <div class="status-bar__column">
-                    <span>19:52</span>
-                </div>
-                <div class="status-bar__column">
-                    <span>15%</span>
-                    <!-- Battery Icon -->
-                    <!-- Lightening Icon -->
-                    <i class="fas fa-battery-quarter fa-lg"></i>
-                    <i class="fas fa-bolt"></i>
-                </div>
-            </div>
-            <header class="screen-header">
-                <h1 class="screen-header__title">More</h1>
-                <div class="screen-header__icons">
-                    <span><i class="fas fa-search fa-sm"></i></span>
-                    <span><i class="fas fa-music"></i></span>
-                    <span
-                        ><a href="settings.html"
-                            ><i class="fas fa-cog fa-sm"></i></a
-                    ></span>
-                </div>
-            </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="CSS/styles.css" rel="stylesheet" />
+    <title>More - sponge talk</title>
+  </head>
+  <body>
+    <div class="screen-fixed">
+      <div class="status-bar">
+        <div class="status-bar__column">
+          <!--BEM명명법 때문임. '__' : 안에 들어갈 내용의 종류. '--' : 속성 혹은 property.-->
+          <span>Flight mode</span>
+          <!--To Do : Wifi Icon-->
+          <i class="fas fa-plane"></i>
         </div>
-
-        <main class="main-screen">
-            <div class="user-component">
-                <div class="user-component__column">
-                    <image
-                        src="penguin.jfif"
-                        class="user-component__avatar user-component__avatar--xl"
-                    />
-                    <div class="user-component__text">
-                        <h4 class="user-component__title">Wonseok Lee</h4>
-                        <h6 class="user-component__subtitle">
-                            +7810 5588 1234
-                        </h6>
-                    </div>
-                </div>
-                <div class="user-component__column">
-                    <i class="far fa-comment-alt"></i>
-                </div>
-            </div>
-
-            <div class="icon-row">
-                <div class="icon-row__icon">
-                    <i class="far fa-calendar-alt"></i><span>Calender</span>
-                </div>
-                <div class="icon-row__icon">
-                    <i class="fas fa-upload"></i>
-                    <span>Talk Drive</span>
-                </div>
-                <div class="icon-row__icon">
-                    <i class="far fa-grin-hearts"></i><span>Emoticons</span>
-                </div>
-                <div class="icon-row__icon">
-                    <i class="fas fa-palette"></i><span>Themes</span>
-                </div>
-            </div>
-            <div class="icon-row">
-                <div class="icon-row__icon">
-                    <i class="fas fa-file-invoice-dollar"></i
-                    ><span>Account</span>
-                </div>
-                <div class="icon-row__icon">
-                    <i class="far fa-comments"></i><span>Open Chats</span>
-                </div>
-            </div>
-            <div class="more-suggestions">
-                <h4 class="more-suggestions__title">Suggestions</h4>
-                <div class="more-suggestions__icons">
-                    <div class="more-suggestions__icon">
-                        <div class="more-suggestions__icon-image">
-                            <i class="fas fa-quote-right"></i>
-                        </div>
-                        <span class="more-suggestions__icon-text"
-                            >Kokoa Story</span
-                        >
-                    </div>
-                    <div class="more-suggestions__icon">
-                        <div class="more-suggestions__icon-image">
-                            <i class="fas fa-quote-right"></i>
-                        </div>
-                        <span class="more-suggestions__icon-text"
-                            >Kokoa Story</span
-                        >
-                    </div>
-                </div>
-            </div>
-        </main>
-
-        <nav class="nav">
-            <ul class="nav__ul">
-                <li class="nav__list">
-                    <a class="nav__link" href="friends.html"
-                        ><span class="nav__notification badge">N</span
-                        ><i class="far fa-user fa-2x"></i
-                    ></a>
-                </li>
-                <li class="nav__list">
-                    <a class="nav__link" href="chats.html"
-                        ><span class="nav__notification badge">1</span>
-                        <i class="far fa-comment fa-2x"></i
-                    ></a>
-                </li>
-                <li class="nav__list">
-                    <a class="nav__link" href="search.html"
-                        ><i class="fas fa-search fa-2x"></i
-                    ></a>
-                </li>
-                <li class="nav__list">
-                    <a class="nav__link" href="more.html"
-                        ><span class="nav__notification badge"></span
-                        ><i class="fas fa-ellipsis-h fa-2x"></i
-                    ></a>
-                </li>
-            </ul>
-        </nav>
-
-        <div id="no-mobile">
-            <span>→ Your screen is too bigㅠㅜ ←</span>
+        <!--이 class는 fontawesome에서 만들어놓은 것.-->
+        <div class="status-bar__column">
+          <span>19:52</span>
         </div>
-        <script
-            src="https://kit.fontawesome.com/358173d6e8.js"
-            crossorigin="anonymous"
-        ></script>
-        <!-- script는 항상 body태그 속 마지막에 있어야 함. -->
-    </body>
+        <div class="status-bar__column">
+          <span>15%</span>
+          <!-- Battery Icon -->
+          <!-- Lightening Icon -->
+          <i class="fas fa-battery-quarter fa-lg"></i>
+          <i class="fas fa-bolt"></i>
+        </div>
+      </div>
+      <header class="screen-header">
+        <h1 class="screen-header__title">More</h1>
+        <div class="screen-header__icons">
+          <span><i class="fas fa-search fa-sm"></i></span>
+          <span><i class="fas fa-music"></i></span>
+          <span
+            ><a href="settings.html"><i class="fas fa-cog fa-sm"></i></a
+          ></span>
+        </div>
+      </header>
+    </div>
+
+    <main class="main-screen">
+      <div class="user-component">
+        <div class="user-component__column">
+          <image
+            src="penguin.jfif"
+            class="user-component__avatar user-component__avatar--xl"
+          />
+          <div class="user-component__text">
+            <h4 class="user-component__title">Wonseok Lee</h4>
+            <h6 class="user-component__subtitle">+7810 5588 1234</h6>
+          </div>
+        </div>
+        <div class="user-component__column">
+          <i class="far fa-comment-alt"></i>
+        </div>
+      </div>
+
+      <div class="icon-row">
+        <div class="icon-row__icon">
+          <i class="far fa-calendar-alt"></i><span>Calender</span>
+        </div>
+        <div class="icon-row__icon">
+          <i class="fas fa-upload"></i>
+          <span>Talk Drive</span>
+        </div>
+        <div class="icon-row__icon">
+          <i class="far fa-grin-hearts"></i><span>Emoticons</span>
+        </div>
+        <div class="icon-row__icon">
+          <i class="fas fa-palette"></i><span>Themes</span>
+        </div>
+      </div>
+      <div class="icon-row">
+        <div class="icon-row__icon">
+          <i class="fas fa-file-invoice-dollar"></i><span>Account</span>
+        </div>
+        <div class="icon-row__icon">
+          <i class="far fa-comments"></i><span>Open Chats</span>
+        </div>
+      </div>
+      <div class="more-suggestions">
+        <h4 class="more-suggestions__title">Suggestions</h4>
+        <div class="more-suggestions__icons">
+          <div class="more-suggestions__icon">
+            <div class="more-suggestions__icon-image">
+              <i class="fas fa-quote-right"></i>
+            </div>
+            <span class="more-suggestions__icon-text">Kokoa Story</span>
+          </div>
+          <div class="more-suggestions__icon">
+            <div class="more-suggestions__icon-image">
+              <i class="fas fa-quote-right"></i>
+            </div>
+            <span class="more-suggestions__icon-text">Kokoa Story</span>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <nav class="nav">
+      <img class="nav__image" src="necktie.svg" />
+      <ul class="nav__ul">
+        <li class="nav__list">
+          <a class="nav__link" href="friends.html"
+            ><span class="nav__notification badge">N</span
+            ><i class="fas fa-user fa-2x"></i
+          ></a>
+        </li>
+        <li class="nav__list">
+          <a class="nav__link" href="chats.html"
+            ><span class="nav__notification badge">23</span>
+            <i class="fas fa-comment fa-2x"></i
+          ></a>
+        </li>
+        <li class="nav__list">
+          <a class="nav__link" href="search.html"
+            ><i class="fas fa-hashtag fa-2x"></i
+          ></a>
+        </li>
+        <li class="nav__list">
+          <a class="nav__link" href="more.html"
+            ><span class="nav__notification badge"></span
+            ><i class="fas fa-ellipsis-h fa-2x for-each-pages"></i
+          ></a>
+        </li>
+      </ul>
+    </nav>
+
+    <div id="no-mobile">
+      <h2>Your screen is too big 🤔</h2>
+      <div class="no-mobile__images">
+        <img src="leftpulling.jpg" />
+        <img src="rightpulling.jpg" />
+      </div>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/358173d6e8.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- script는 항상 body태그 속 마지막에 있어야 함. -->
+  </body>
 </html>

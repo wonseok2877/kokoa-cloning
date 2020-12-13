@@ -2,61 +2,61 @@
 <!-- 명심해. 기억하고 암기하는게 아니라 이해하는거야. html기본 구조를 다 직접 작성할 필요는 없어. 단축키 '!'하나면 돼.-->
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link href="CSS/styles.css" rel="stylesheet" />
-        <title>kokoa talk</title>
-    </head>
-    <body>
-        <div class="status-bar">
-            <div class="status-bar__column">
-                <!--BEM명명법 때문임. '__' : 안에 들어갈 내용의 종류. '--' : 속성 혹은 property.-->
-                <span>No Service</span>
-                <!--To Do : Wifi Icon-->
-                <i class="fas fa-wifi"></i>
-            </div>
-            <!--이 class는 fontawesome에서 만들어놓은 것.-->
-            <div class="status-bar__column">
-                <span>19:52</span>
-            </div>
-            <div class="status-bar__column">
-                <span>15%</span>
-                <!-- Battery Icon -->
-                <!-- Lightening Icon -->
-                <i class="fas fa-battery-quarter fa-lg"></i>
-                <i class="fas fa-bolt"></i>
-            </div>
-        </div>
-        <header class="welcome-header">
-            <h1 class="welcome-header__title">Welcome to KokoaTalk !</h1>
-            <p class="welcome-header__text">
-                If you have a Kokoa account, log in with your email or phone
-                number.
-            </p>
-        </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="CSS/styles.css" rel="stylesheet" />
+    <title>kokoa talk</title>
+  </head>
+  <body class="index-body-color">
+    <div class="status-bar">
+      <div class="status-bar__column">
+        <!--BEM명명법 때문임. '__' : 안에 들어갈 내용의 종류. '--' : 속성 혹은 property.-->
+        <span>Flight mode</span>
+        <!--To Do : Wifi Icon-->
+        <i class="fas fa-plane"></i>
+      </div>
+      <!--이 class는 fontawesome에서 만들어놓은 것.-->
+      <div class="status-bar__column">
+        <span>19:52</span>
+      </div>
+      <div class="status-bar__column">
+        <span>15%</span>
+        <!-- Battery Icon -->
+        <!-- Lightening Icon -->
+        <i class="fas fa-battery-quarter fa-lg"></i>
+        <i class="fas fa-bolt"></i>
+      </div>
+    </div>
+    <header class="welcome-header">
+      <img src="pirate.jpg" />
+      <h1 class="welcome-header__title">Welcome to SpongeTalk !</h1>
+      <p class="welcome-header__text">
+        If you have a Kokoa account, log in with your email or phone number.
+      </p>
+    </header>
 
-        <form action="friends.html" method="get" id="login-form">
-            <!--form과 input은 이렇게 다른 html(사이트)에다 정보를 보내는 역할을 한다!-->
-            <input
-                name="username"
-                type="text"
-                placeholder="Email or Phone number"
-            />
-            <input name="password" type="password" placeholder="Password" />
-            <input type="submit" value="Log in" />
-            <input type="submit" value="Sign up" />
-            <a href="#">Forgot? Find Account or password.</a>
-        </form>
-        <!-- fontawesome.com의 codekit를 html에 다운받았다고 보면 됨. -->
-        <div id="no-mobile">
-            <span>→ Your screen is too bigㅠㅜ ←</span>
-        </div>
+    <form action="friends.html" method="get" id="login-form">
+      <!--form과 input은 이렇게 다른 html(사이트)에다 정보를 보내는 역할을 한다!-->
+      <input name="username" type="text" placeholder="Email or Phone number" />
+      <input name="password" type="password" placeholder="Password" />
+      <input type="submit" value="Log in" />
+      <input type="submit" value="Sign up" />
+      <a href="#">Forgot? Find Account or password.</a>
+    </form>
+    <!-- fontawesome.com의 codekit를 html에 다운받았다고 보면 됨. -->
+    <div id="no-mobile">
+      <h2>Your screen is too big 🤔</h2>
+      <div class="no-mobile__images">
+        <img src="leftpulling.jpg" />
+        <img src="rightpulling.jpg" />
+      </div>
+    </div>
 
-        <script
-            src="https://kit.fontawesome.com/358173d6e8.js"
-            crossorigin="anonymous"
-        ></script>
-        <!-- script는 항상 body태그 속 마지막에 있어야 함. -->
-    </body>
+    <script
+      src="https://kit.fontawesome.com/358173d6e8.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- script는 항상 body태그 속 마지막에 있어야 함. -->
+  </body>
 </html>

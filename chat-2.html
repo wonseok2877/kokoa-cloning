@@ -1,0 +1,121 @@
+<!-- 대부분의 웹 서버가 디폴트로 index.html을 찾아보도록 설정되어있다. index는 지표를 뜻함. 그래서 index.html만듬. -->
+<!-- 명심해. 기억하고 암기하는게 아니라 이해하는거야. html기본 구조를 다 직접 작성할 필요는 없어. 단축키 '!'하나면 돼.-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="CSS/styles.css" rel="stylesheet" />
+    <title>Chat with patrick - sponge talk</title>
+  </head>
+  <body id="chat-screen">
+    <div class="screen-fixed">
+      <div class="status-bar">
+        <div class="status-bar__column">
+          <span>Flight mode</span>
+          <i class="fas fa-plane"></i>
+        </div>
+        <!--이 class는 fontawesome에서 만들어놓은 것.-->
+        <div class="status-bar__column">
+          <span>19:52</span>
+        </div>
+        <div class="status-bar__column">
+          <span>15%</span>
+          <!-- Battery Icon -->
+          <!-- Lightening Icon -->
+          <i class="fas fa-battery-quarter fa-lg"></i>
+          <i class="fas fa-bolt"></i>
+        </div>
+      </div>
+      <header class="alt-header">
+        <div class="alt-header__column">
+          <a href="chats.html"> <i class="fas fa-angle-left fa-2x"></i></a>
+        </div>
+        <div class="alt-header__column">
+          <h1 class="alt-header__title">patrick star</h1>
+        </div>
+        <div class="alt-header__column">
+          <span><i class="fas fa-search fa-lg"></i></span>
+          <span><i class="fas fa-bars fa-lg"></i></span>
+        </div>
+      </header>
+    </div>
+
+    <main class="main-screen main-chat">
+      <div class="chat__timestamp">Sunday, December 13, 2020</div>
+      <div class="message-row">
+        <img src="patrick.gif" />
+        <div class="message-row__content">
+          <span class="message__author">patrick star</span>
+          <div class="message__info">
+            <span class="message__bubble"
+              >spongebob. spongebob! spongebob.</span
+            >
+            <span class="message__time">19:26</span>
+          </div>
+        </div>
+      </div>
+      <div class="message-row message-row--own">
+        <div class="message-row__content">
+          <div class="message__info">
+            <span class="message__bubble">Why, patriiiick?</span>
+            <span class="message__time">19:30</span>
+          </div>
+        </div>
+      </div>
+      <div class="message-row">
+        <img src="patrick.gif" />
+        <div class="message-row__content">
+          <span class="message__author">patrick star</span>
+          <div class="message__info">
+            <span class="message__bubble"
+              >Would you see my present for you? it's cuuute</span
+            >
+            <span class="message__time">19:31</span>
+          </div>
+        </div>
+      </div>
+      <div class="message-row">
+        <img src="patrick.gif" />
+        <div class="message-row__content">
+          <span class="message__author">patrick star</span>
+          <div class="message__info">
+            <span class="message__bubble message__bubble-image">
+              <img src="present.jpg" />
+            </span>
+            <span class="message__time"></span>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <form class="reply">
+      <div class="reply__column">
+        <i class="far fa-plus-square fa-lg"></i>
+      </div>
+      <div class="reply__column">
+        <input type="text" name="" placeholder="Write a message.." />
+        <i class="far fa-smile-wink fa-lg"></i>
+      </div>
+      <div class="reply__column">
+        <button>
+          <i class="fas fa-arrow-circle-up fa-2x"></i>
+        </button>
+      </div>
+    </form>
+
+    <div id="no-mobile">
+      <h2>Your screen is too big 🤔</h2>
+      <div class="no-mobile__images">
+        <img src="leftpulling.jpg" />
+        <img src="rightpulling.jpg" />
+      </div>
+    </div>
+    <img class="main-background" src="seabackground.jpg" />
+    <script
+      src="https://kit.fontawesome.com/358173d6e8.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- script는 항상 body태그 속 마지막에 있어야 함. -->
+  </body>
+</html>

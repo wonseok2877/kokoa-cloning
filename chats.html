@@ -6,16 +6,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="CSS/styles.css" rel="stylesheet" />
-    <title>chats - kokoa talk</title>
+    <title>chats - sponge talk</title>
   </head>
   <body>
     <div class="screen-fixed">
       <div class="status-bar">
         <div class="status-bar__column">
-          <!--BEM명명법 때문임. '__' : 안에 들어갈 내용의 종류. '--' : 속성 혹은 property.-->
-          <span>No Service</span>
-          <!--To Do : Wifi Icon-->
-          <i class="fas fa-wifi"></i>
+          <span>Flight mode</span>
+          <i class="fas fa-plane"></i>
         </div>
         <!--이 class는 fontawesome에서 만들어놓은 것.-->
         <div class="status-bar__column">
@@ -35,13 +33,59 @@
           <span><i class="fas fa-search fa-sm"></i></span>
           <span><i class="far fa-comment-dots fa-sm"></i></span>
           <span><i class="fas fa-music fa-sm"></i></span>
-          <span><i class="fas fa-cog fa-sm"></i></span>
+          <span
+            ><a href="settings.html"><i class="fas fa-cog fa-sm"></i></a
+          ></span>
         </div>
       </header>
     </div>
 
     <main class="main-screen">
-      <a href="chat.html">
+      <a href="chat-1.html">
+        <div class="user-component">
+          <div class="user-component__column">
+            <image
+              src="squidward.jpeg"
+              class="user-component__avatar user-component__avatar--sm"
+            />
+            <div class="user-component__text">
+              <h4 class="user-component__title user-component__title--not-bold">
+                squidward
+              </h4>
+              <h6 class="user-component__subtitle">
+                come to krusty krab as soon as possible!!!
+              </h6>
+            </div>
+          </div>
+          <div class="user-component__column">
+            <span class="user-component__time">19:51</span>
+            <span class="badge">2</span>
+          </div>
+        </div>
+      </a>
+      <a href="chat-2.html">
+        <div class="user-component">
+          <div class="user-component__column">
+            <image
+              src="patrick.gif"
+              class="user-component__avatar user-component__avatar--sm"
+            />
+            <div class="user-component__text">
+              <h4 class="user-component__title user-component__title--not-bold">
+                patrick star
+              </h4>
+              <h6 class="user-component__subtitle">
+                Let's play until night hahaahaaaha
+              </h6>
+            </div>
+          </div>
+          <div class="user-component__column">
+            <span class="user-component__time">19:45</span>
+            <span></span>
+          </div>
+        </div>
+      </a>
+      <a href="chat-1.html">
         <div class="user-component">
           <div class="user-component__column">
             <image
@@ -61,25 +105,109 @@
           </div>
         </div>
       </a>
+      <a href="chat-1.html">
+        <div class="user-component">
+          <div class="user-component__column">
+            <image
+              src="yy.png"
+              class="user-component__avatar user-component__avatar--sm"
+            />
+            <div class="user-component__text">
+              <h4 class="user-component__title user-component__title--not-bold">
+                kokoa channel
+              </h4>
+              <h6 class="user-component__subtitle">hi there!</h6>
+            </div>
+          </div>
+          <div class="user-component__column">
+            <span class="user-component__time">16:55</span>
+            <span class="badge">1</span>
+          </div>
+        </div>
+      </a>
+      <a href="chat-1.html">
+        <div class="user-component">
+          <div class="user-component__column">
+            <image
+              src="yy.png"
+              class="user-component__avatar user-component__avatar--sm"
+            />
+            <div class="user-component__text">
+              <h4 class="user-component__title user-component__title--not-bold">
+                kokoa channel
+              </h4>
+              <h6 class="user-component__subtitle">hi there!</h6>
+            </div>
+          </div>
+          <div class="user-component__column">
+            <span class="user-component__time">16:55</span>
+            <span class="badge">1</span>
+          </div>
+        </div>
+      </a>
+      <a href="chat-1.html">
+        <div class="user-component">
+          <div class="user-component__column">
+            <image
+              src="yy.png"
+              class="user-component__avatar user-component__avatar--sm"
+            />
+            <div class="user-component__text">
+              <h4 class="user-component__title user-component__title--not-bold">
+                kokoa channel
+              </h4>
+              <h6 class="user-component__subtitle">hi there!</h6>
+            </div>
+          </div>
+          <div class="user-component__column">
+            <span class="user-component__time">16:55</span>
+            <span class="badge">1</span>
+          </div>
+        </div>
+      </a>
+      <a href="chat-1.html">
+        <div class="user-component">
+          <div class="user-component__column">
+            <image
+              src="yy.png"
+              class="user-component__avatar user-component__avatar--sm"
+            />
+            <div class="user-component__text">
+              <h4 class="user-component__title user-component__title--not-bold">
+                kokoa channel
+              </h4>
+              <h6 class="user-component__subtitle">hi there!</h6>
+            </div>
+          </div>
+          <div class="user-component__column">
+            <span class="user-component__time">16:55</span>
+            <span class="badge">1</span>
+          </div>
+        </div>
+      </a>
+      <div class="see-below">
+        <i class="fas fa-arrow-down"></i><span> More...</span>
+      </div>
     </main>
 
     <nav class="nav">
+      <img class="nav__image" src="necktie.svg" />
       <ul class="nav__ul">
         <li class="nav__list">
           <a class="nav__link" href="friends.html"
             ><span class="nav__notification badge">N</span
-            ><i class="far fa-user fa-2x"></i
+            ><i class="fas fa-user fa-2x"></i
           ></a>
         </li>
         <li class="nav__list">
           <a class="nav__link" href="chats.html"
-            ><span class="nav__notification badge">1</span>
-            <i class="fas fa-comment fa-2x"></i
+            ><span class="nav__notification badge">23</span>
+            <i class="fas fa-comment fa-2x for-each-pages"></i
           ></a>
         </li>
         <li class="nav__list">
           <a class="nav__link" href="search.html"
-            ><i class="fas fa-search fa-2x"></i
+            ><i class="fas fa-hashtag fa-2x"></i
           ></a>
         </li>
         <li class="nav__list">
@@ -91,8 +219,13 @@
     </nav>
 
     <div id="no-mobile">
-      <span>→ Your screen is too bigㅠㅜ ←</span>
+      <h2>Your screen is too big 🤔</h2>
+      <div class="no-mobile__images">
+        <img src="leftpulling.jpg" />
+        <img src="rightpulling.jpg" />
+      </div>
     </div>
+
     <script
       src="https://kit.fontawesome.com/358173d6e8.js"
       crossorigin="anonymous"

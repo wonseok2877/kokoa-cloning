@@ -1,81 +1,152 @@
 .nav {
-    /*position:fixed로 두면 해당 element가 원래의 width를 잃고 찌부러진다. 왜?
+  /*position:fixed로 두면 해당 element가 원래의 width를 잃고 찌부러진다. 왜?
     니꼬 답변: When we make an element fixed it basically breaks away from the body to another layer, so we need to give it proportions again.*/
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: #eee;
-    padding: 10px 0;
-    border-top: solid 1px rgba(0, 0, 0, 0.7);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--brown);
+  padding: 10px 0;
+  border-top: solid 1px rgba(0, 0, 0, 0.7);
 }
 .nav__ul {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
 .nav__link {
-    position: relative; /*notification아 position absolute를 가지기 위한 */
-    color: inherit;
+  position: relative; /*notification아 position absolute를 가지기 위한 */
+  color: rgb(51, 134, 230);
 }
-.nav__list:first-child {
-    /*커스텀. :hover과 transition이용. */
-    color: white;
-}
-.nav__link[href="search.html"] svg {
-    height: 30px;
-    width: 30px;
+.nav__list:first- {
+  /*커스텀. :hover과 transition이용. */
 }
 /* 애니메이션 */
 @keyframes notificationAnimation {
-    0% {
-        transform: none;
-    }
-    50% {
-        transform: translateY(-5px) rotateY(180deg);
-    }
-    100% {
-        transform: none;
-    }
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: translateY(-5px) rotateY(180deg);
+  }
+  100% {
+    transform: none;
+  }
 }
+/* from animista */
+@keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.71);
+    transform: scale(0.71);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(1.28);
+    transform: scale(1.68);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.67);
+    transform: scale(0.67);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+}
+
 .nav__notification {
-    position: absolute; /*그냥 flex의 relative의 경우 box들끼리 부딪힐 수밖에 없다. 같은 layer에 있기 때문.*/
-    left: 22px;
-    bottom: 15px;
-    animation: notificationAnimation 2s ease-in-out infinite;
+  /* animation: notificationAnimation 2s ease-in-out infinite; */
+  animation: heartbeat 1.5s ease-in-out infinite both;
+  z-index: 1;
+  position: absolute; /*그냥 flex의 relative의 경우 box들끼리 부딪힐 수밖에 없다. 같은 layer에 있기 때문.*/
+  left: 22px;
+  bottom: 15px;
 }
 .nav__list:first-child .nav__notification {
-    width: 20px;
-    height: 20px;
-    font-size: 13px;
-    font-style: italic;
+  width: 20px;
+  height: 20px;
+  font-size: 13px;
+  font-style: italic;
 }
 .nav__list:last-child .nav__notification {
-    position: absolute;
-    left: 32px;
-    bottom: 25px;
-    width: 10px;
-    height: 10px;
-    border-radius: 5px;
+  position: absolute;
+  left: 32px;
+  bottom: 25px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
 }
+/* button animation */
+/* @keyframes appearBtnAnimation {
+  from {
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+} */
 @keyframes appearBtnAnimation {
-    from {
-    }
-    to {
-        transform: none;
-        opacity: 1;
-    }
+  0% {
+    color: rgb(51, 134, 230);
+  }
+  20% {
+    transform: translate3d(10px, -50px, 0px);
+  }
+  40% {
+    transform: translate3d(-30px, -120px, 0px);
+  }
+  60% {
+    transform: translate3d(50px, -150px, 0px);
+  }
+  80% {
+    transform: translate3d(-40px, -250px, 0px);
+  }
+  100% {
+    transform: translate3d(30px, -300px, 0px);
+    opacity: 0.4;
+    color: aliceblue;
+  }
 }
+
+/* delay때문에, keyframes가 적용되기 전까지 element들은 멀뚱멀뚱 있다. 그래서 아예 translateY로 감춰버림 */
 .nav__list {
-    animation: appearBtnAnimation 0.5s ease-in-out forwards;
-    transform: translateY(60px);
-    /* delay때문에, keyframes가 적용되기 전까지 element들은 멀뚱멀뚱 있다. 그래서 아예 translateY로 감춰버림 */
-    opacity: 0;
+  animation: appearBtnAnimation 0.8s linear;
+  opacity: 1;
+}
+.nav__list i {
+  opacity: 0.6;
 }
 .nav__list:nth-child(2) {
-    animation-delay: 0.3s;
+  animation-delay: 0.4s;
 }
 .nav__list:nth-child(3) {
-    animation-delay: 0.6s;
+  animation-delay: 0.2s;
 }
 .nav__list:last-child {
-    animation-delay: 0.9s;
+  animation-delay: 0.3s;
+}
+/* cascading에 따라서 그냥 적용될줄 알았는데 안된다. 그래서 specifity로 밀어붙여서 .nav__list i를 이겼다. */
+.nav__list .for-each-pages {
+  opacity: 1;
+}
+.nav__image {
+  position: absolute;
+  left: 46vw;
+  top: 0;
+  width: 30px;
+  height: 45px;
+  fill: #d65449; /*적용안됨..svg다루는 법은 나중에 배워야겠다. 디테일으로 갈수록 어려워지네.*/
 }

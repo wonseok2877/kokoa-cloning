@@ -1,48 +1,53 @@
-#friends-display-link {
-    display: block;
-    text-align: center;
-    width: 100%;
-    margin: 100px 0 5px;
-    padding: 16px 0;
-    background-color: #fafafa;
-    font-weight: 600;
-}
-#friends-display-link i {
-    color: rgba(0, 0, 0, 0.3);
-    margin: 0 8px; /*inline도 양옆에는 margin을 가질 수 있으므로.*/
-}
 .friends-screen {
-    padding: 0px var(--horizontal-space);
+  margin-top: 120px;
+  padding: 10px var(--horizontal-space) 80px;
 }
 .friends-screen__channel {
-    margin-top: 25px;
+  margin-top: 15px;
 }
 .friends-screen__channel-header {
-    display: flex;
-    justify-content: space-between;
-    padding: 12px 0 20px;
-    color: var(--opacity);
-    border-top: var(--main-border);
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0 20px;
+  color: lightskyblue;
+  border-top: var(--main-border);
+}
+.friends-screen__channel-header i:hover {
+  cursor: pointer;
 }
 @keyframes hideSplashScreen {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-        visibility: hidden;
-    }
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    display: none;
+    visibility: hidden;
+  }
 }
 #splash-screen {
-    position: absolute;
-    background-color: var(--yellow);
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 128px;
-    animation: hideSplashScreen 0.5s ease-out forwards; /*forwards! it remembers the end of keyframe.*/
-    animation-delay: 1.5s;
+  position: absolute;
+  z-index: 3;
+  /* linear-gradient */
+  background: linear-gradient(#55ecf1, rgb(241, 189, 77));
+  width: 97.3vw;
+  height: 100vh;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 128px;
+  animation: hideSplashScreen 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  /*forwards! it remembers the end of keyframe.*/
+  animation-delay: 1.5s;
+}
+.main-background {
+  position: fixed;
+  top: 0;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
 }

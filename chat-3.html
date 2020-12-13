@@ -6,15 +6,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="CSS/styles.css" rel="stylesheet" />
-    <title>Settings - sponge talk</title>
+    <title>Chat with mr.krabs - sponge talk</title>
   </head>
-  <body>
+  <body id="chat-screen">
     <div class="screen-fixed">
       <div class="status-bar">
         <div class="status-bar__column">
-          <!--BEM명명법 때문임. '__' : 안에 들어갈 내용의 종류. '--' : 속성 혹은 property.-->
           <span>Flight mode</span>
-          <!--To Do : Wifi Icon-->
           <i class="fas fa-plane"></i>
         </div>
         <!--이 class는 fontawesome에서 만들어놓은 것.-->
@@ -31,59 +29,54 @@
       </div>
       <header class="alt-header">
         <div class="alt-header__column">
-          <a href="more.html"> <i class="fas fa-angle-left fa-2x"></i></a>
+          <a href="chats.html"> <i class="fas fa-angle-left fa-2x"></i></a>
         </div>
         <div class="alt-header__column">
-          <h1 class="alt-header__title">Settings</h1>
+          <h1 class="alt-header__title">squidward</h1>
         </div>
         <div class="alt-header__column">
-          <i class="fas fa-search fa-lg"></i>
+          <span><i class="fas fa-search fa-lg"></i></span>
+          <span><i class="fas fa-bars fa-lg"></i></span>
         </div>
       </header>
     </div>
 
-    <main class="main-screen">
-      <ul class="settings-list">
-        <li class="settings__setting">
-          <i class="fas fa-bullhorn"></i><span>Notices</span>
-        </li>
-        <li class="settings__setting">
-          <i class="fas fa-flask"></i><span>Kokoa Lab</span>
-        </li>
-        <li class="settings__setting">
-          <i class="fas fa-info-circle"></i><span>Version</span
-          ><span class="list-additional">Latest Version</span>
-        </li>
-      </ul>
+    <main class="main-screen main-chat">
+      <div class="chat__timestamp">Sunday, December 13, 2020</div>
+      <div class="message-row">
+        <img src="squidward.jpeg" />
+        <div class="message-row__content">
+          <span class="message__author">squidward</span>
+          <div class="message__info">
+            <span class="message__bubble">Hey spongebob?</span>
+            <span class="message__time">19:36</span>
+          </div>
+        </div>
+      </div>
+      <div class="message-row message-row--own">
+        <div class="message-row__content">
+          <div class="message__info">
+            <span class="message__bubble">I'm here squidward,</span>
+            <span class="message__time">19:38</span>
+          </div>
+        </div>
+      </div>
     </main>
 
-    <nav class="nav">
-      <ul class="nav__ul">
-        <li class="nav__list">
-          <a class="nav__link" href="friends.html"
-            ><span class="nav__notification badge">N</span
-            ><i class="fas fa-user fa-2x"></i
-          ></a>
-        </li>
-        <li class="nav__list">
-          <a class="nav__link" href="chats.html"
-            ><span class="nav__notification badge">1</span>
-            <i class="fas fa-comment fa-2x"></i
-          ></a>
-        </li>
-        <li class="nav__list">
-          <a class="nav__link" href="search.html"
-            ><i class="fas fa-hashtag fa-2x"></i
-          ></a>
-        </li>
-        <li class="nav__list">
-          <a class="nav__link" href="more.html"
-            ><span class="nav__notification badge"></span
-            ><i class="fas fa-ellipsis-h fa-2x"></i
-          ></a>
-        </li>
-      </ul>
-    </nav>
+    <form class="reply">
+      <div class="reply__column">
+        <i class="far fa-plus-square fa-lg"></i>
+      </div>
+      <div class="reply__column">
+        <input type="text" name="" placeholder="Write a message.." />
+        <i class="far fa-smile-wink fa-lg"></i>
+      </div>
+      <div class="reply__column">
+        <button>
+          <i class="fas fa-arrow-circle-up fa-2x"></i>
+        </button>
+      </div>
+    </form>
 
     <div id="no-mobile">
       <h2>Your screen is too big 🤔</h2>
@@ -92,6 +85,7 @@
         <img src="rightpulling.jpg" />
       </div>
     </div>
+    <img class="main-background" src="seabackground.jpg" />
 
     <script
       src="https://kit.fontawesome.com/358173d6e8.js"
