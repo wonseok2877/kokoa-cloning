@@ -38,8 +38,20 @@
 
     <form action="friends.html" method="get" id="login-form">
       <!--form과 input은 이렇게 다른 html(사이트)에다 정보를 보내는 역할을 한다!-->
-      <input name="username" type="text" placeholder="Email or Phone number" />
-      <input name="password" type="password" placeholder="Password" />
+      <input
+        name="username"
+        type="text"
+        placeholder="Email or Phone number"
+        required
+        maxlength="14"
+      />
+      <input
+        name="password"
+        type="password"
+        placeholder="Password"
+        required
+        maxlength="12"
+      />
       <input type="submit" value="Log in" />
       <input type="submit" value="Sign up" />
       <a href="#">Forgot? Find Account or password.</a>
