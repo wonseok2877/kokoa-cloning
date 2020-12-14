@@ -19,7 +19,7 @@
 }
 .user-component__title {
   text-transform: capitalize;
-  font-size: 20px;
+  font-size: 21px;
   font-weight: 600;
 }
 .user-component__title--not-bold {
@@ -27,7 +27,7 @@
 }
 .user-component__subtitle {
   margin-top: 12px;
-  font-size: 15px;
+  font-size: 17px;
   color: var(--opacity);
 }
 .user-component__avatar--xl {
@@ -77,7 +77,7 @@
 }
 .see-below {
   cursor: pointer;
-  font-size: 20px;
-  margin: 30px 34vw 0 39vw;
-  color: rgb(30, 49, 61);
+  font-size: 24px;
+  margin: 30px 32vw 0 37vw;
+  color: rgb(58, 141, 177);
 }

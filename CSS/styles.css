@@ -13,6 +13,7 @@
 @import "components/icon-row.css";
 @import "components/alt-screen-header.css";
 @import "components/no-mobile.css";
+@import "components/advertisement.css";
 
 /*screens folder*/
 @import "screens/login.css";
@@ -25,7 +26,6 @@
 /* default styles */
 body {
   color: #2e363e;
-  height: 100vh;
   /* applying google font */
   font-family: "Londrina Solid", cursive;
   letter-spacing: 1.5px;

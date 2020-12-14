@@ -1,5 +1,5 @@
 #no-mobile {
-  position: absolute;
+  position: fixed;
   z-index: 4;
   display: flex;
   flex-direction: column;
@@ -20,7 +20,7 @@
 .no-mobile__images img {
   border-radius: 10%;
 }
-@media screen and (max-width: 645px) {
+@media screen and (max-width: 675px) {
   #no-mobile {
     display: none;
   }

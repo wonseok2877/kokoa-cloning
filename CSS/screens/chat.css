@@ -1,6 +1,7 @@
 #chat-screen {
+  /* 싯팔 margin, padding이 main-chat에 적용 안된다. fixed 요소때문에 다 가려짐. */
   background-color: #abc1d1;
-  padding-bottom: 100px;
+  padding-bottom: 50px;
 }
 #chat-screen .screen-fixed {
   background-color: lightseagreen;
@@ -63,10 +64,19 @@
   height: 260px;
   width: 260px;
 }
+/* modifier을 써도 안바껴서 specifity로 body하나 더 붙임ㅋ */
+body .message-row--own .message__bubble-image {
+  background-color: inherit;
+  padding: 0;
+}
 .message__author,
 .message__time {
   opacity: 0.8;
   font-size: 14px;
+}
+.message__unread {
+  margin-left: 8px;
+  color: gold;
 }
 .message-row--own {
   justify-content: flex-end;

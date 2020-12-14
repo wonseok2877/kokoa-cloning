@@ -1,11 +1,40 @@
 .badge {
-    display: flex; /*display를 한 element에 여러개 써도 되는구나. 그냥 한번에 쓰면 안되나*/
-    justify-content: center;
-    align-items: center;
-    border-radius: 13px;
-    width: 26px;
-    height: 26px;
-    font-size: 18px;
-    background-color: orangered;
-    color: white;
+  display: flex; /*display를 한 element에 여러개 써도 되는구나. 그냥 한번에 쓰면 안되나*/
+  justify-content: center;
+  align-items: center;
+  border-radius: 13px;
+  width: 26px;
+  height: 26px;
+  font-size: 18px;
+  background-color: orangered;
+  color: white;
+}
+@keyframes vibrate-1 {
+  0% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+  20% {
+    -webkit-transform: translate(-2px, 2px);
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    -webkit-transform: translate(-2px, -2px);
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    -webkit-transform: translate(2px, 2px);
+    transform: translate(2px, 2px);
+  }
+  80% {
+    -webkit-transform: translate(2px, -2px);
+    transform: translate(2px, -2px);
+  }
+  100% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+}
+.special-badge {
+  animation: vibrate-1 0.4s linear infinite both;
 }

@@ -1,0 +1,32 @@
+.header-advertisement {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 91.5vw;
+  border-radius: 20px;
+  color: aliceblue;
+  background-color: var(--opacity);
+  cursor: pointer;
+}
+.header-advertisement__column h2 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+.header-advertisement__column-first-text {
+  padding: 5px 10px;
+  border-radius: 12px;
+  color: var(--brown);
+  background-color: var(--yellow);
+}
+.header-advertisement__column-second-text {
+  margin-left: 18px;
+  font-size: 21px;
+  color: rgb(145, 166, 187);
+}
+.header-advertisement__column img {
+  transform: rotateZ(20deg);
+  border-radius: 50%;
+  height: 80px;
+  width: 110px;
+}
