@@ -1,3 +1,5 @@
+/* divide and conquer!!!!! */
+
 /* googlefonts의 폰트 파일을 가져옴. 폰트 파일을 많이 추가할 수록 웹사이트가 무거워지니 선택적으로 쓰자.*/
 @import url("https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300;400;900&display=swap");
 /* 파일 순서 중요하다. 먼저 reset과 variables를 넣은 다음, 다른 CSS를 적용시켜야 함. */
@@ -14,6 +16,7 @@
 @import "components/alt-screen-header.css";
 @import "components/no-mobile.css";
 @import "components/advertisement.css";
+@import "components/etc.css";
 
 /*screens folder*/
 @import "screens/login.css";
@@ -40,18 +43,4 @@ input:focus {
 a {
   color: inherit;
   text-decoration: none;
-}
-/* changing audio default style */
-audio {
-  display: block;
-  width: 240px;
-  background-color: inherit;
-  outline: none; /*outline !*/
-}
-/* webkit ! */
-audio::-webkit-media-controls-panel {
-  background-color: #4cabc5;
-}
-audio::-webkit-textfield-decoration-container {
-  color: white;
 }

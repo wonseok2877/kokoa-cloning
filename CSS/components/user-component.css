@@ -75,9 +75,3 @@
 .user-component__column i:hover {
   cursor: pointer;
 }
-.see-below {
-  cursor: pointer;
-  font-size: 24px;
-  margin: 30px 32vw 0 37vw;
-  color: rgb(58, 141, 177);
-}

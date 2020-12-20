@@ -1,0 +1,29 @@
+/* default setting of backgroud image  */
+.main-background {
+  position: fixed;
+  top: 0;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+}
+/* changing audio default style */
+audio {
+  display: block;
+  width: 240px;
+  background-color: inherit;
+  outline: none; /*outline !*/
+}
+/* webkit ! */
+audio::-webkit-media-controls-panel {
+  background-color: #4cabc5;
+}
+audio::-webkit-textfield-decoration-container {
+  color: white;
+}
+/* text 'more...' */
+.see-below {
+  cursor: pointer;
+  font-size: 24px;
+  margin: 30px 32vw 0 37vw;
+  color: rgb(58, 141, 177);
+}

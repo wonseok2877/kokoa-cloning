@@ -44,10 +44,3 @@
   /*forwards! it remembers the end of keyframe.*/
   animation-delay: 1.5s;
 }
-.main-background {
-  position: fixed;
-  top: 0;
-  z-index: -1;
-  width: 100vw;
-  height: 100vh;
-}
